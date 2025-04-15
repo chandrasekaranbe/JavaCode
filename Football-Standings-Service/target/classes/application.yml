@@ -1,0 +1,24 @@
+external:
+  football-api:
+    base-url: "https://apiv3.apifootball.com/"
+    key: "9bb66184e0c8145384fd2cc0f7b914ada57b4e8fd2e4d6d586adcc27c257a978"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  # Exposes all Actuator endpoints
+  endpoint:
+    health:
+      show-details: always
+  metrics:
+    enable:
+      jvm: true  # Enables JVM metrics
+
+spring:
+  cache:
+    type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
